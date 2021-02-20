@@ -7,7 +7,7 @@ A DBD.js Discord Bot made specifically for my Discord Server. It's made to keep 
 
 What is the purpose of this bot?
 
-- get the `StudyGroup` server active
+- get the `focus` server active
 - help people get more `organised`
 - `introduce` new members in the server
 - make the `overall experience` fun
