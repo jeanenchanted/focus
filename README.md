@@ -1,7 +1,7 @@
 # focus
 A new way to harness learning.
 
-A DBD.js Discord Bot made specifically for my Discord Server. It's made to keep me and my friends productive
+A DBD.js Discord Bot made specifically for my Discord Server. It's made to keep me and my friends productive and the server a fun place.
 
 ## About the Bot
 
