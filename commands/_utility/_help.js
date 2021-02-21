@@ -23,7 +23,7 @@ Would like it if you gave some credit!
 */
 
 module.exports = {
-  name: "help",
+  name: "help2",
   aliases: ["h", "commands", "command"],
   code: `$title[ $toUppercase[commands | $replaceText[$replaceText[$checkContains[query$messagequery;$splitText[4];$splitText[11];$splitText[18];$splitText[25];$splitText[25];$splitText[32];$splitText[39]];false;modules];true;$message[1]] ] ]
 
@@ -122,6 +122,32 @@ $textSplit[You can start changing module and command names here!
 - .
 ;
 - ]
+
+$createObject[{
+	"//1": "You can start changing module and command names here!",
+	"//2": "Enter your values below the labels and replace the blanks.",
+
+	"1 name": \`\`,
+	"1 commands": \`\`,
+
+	"2 name": \`\`,
+	"2 commands": \`\`,
+
+	"3 name": \`\`,
+	"3 commands": \`\`,
+
+	"4 name": \`\`,
+	"4 commands": \`\`,
+
+	"5 name": \`\`,
+	"5 commands": \`\`,
+
+	"6 name": \`\`,
+	"6 commands": \`\`,
+
+	"prefix": \`\`,
+	
+}]
 
 `
 };
