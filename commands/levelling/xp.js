@@ -10,8 +10,6 @@ $if[$checkCondition[$sum[$getUserVar[CurrentXP];$getObjectProperty[random]]>=$ge
 
 	$setUserVar[Level;$sum[1;$getUserVar[Level]]]
 
-	$replaceText[$replaceText[$replaceText[$getUserVar[lvlUpMessage];{user};$username];{mention};<@$authorID>];{level};$sum[$getUserVar[Level];1]]
-
 $else
 
 	$setUserVar[CurrentXP;$sum[$getUserVar[CurrentXP];$getObjectProperty[random]]]
@@ -26,3 +24,4 @@ $cooldown[15s;]
 
 `
 })
+// 	$replaceText[$replaceText[$replaceText[$getUserVar[lvlUpMessage];{user};$username];{mention};<@$authorID>];{level};$sum[$getUserVar[Level];1]]
