@@ -24,5 +24,4 @@ $cooldown[15s;]
 
 `
 })
-
 // 	$replaceText[$replaceText[$replaceText[$getUserVar[lvlUpMessage];{user};$username];{mention};<@$authorID>];{level};$sum[$getUserVar[Level];1]]
