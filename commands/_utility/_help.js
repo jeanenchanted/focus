@@ -7,7 +7,6 @@ $color[$getRoleColor[$highestRole[784688234672160788]]]
 
 $if[$message[1]!=]
 
-	$if[$checkContains[$toLowercase[$message[1]];$getObjectProperty[a1name];$getObjectProperty[a2name];$getObjectProperty[a3name];$getObjectProperty[a4name];$getObjectProperty[a5name];$getObjectProperty[a6name]]==true]
 
 		$if[$toLowercase[$message[1]]==$getObjectProperty[a1name]]
 
@@ -21,7 +20,6 @@ $if[$message[1]!=]
 
 			]
 
-			Module 1 ($message[1])
 
 		$else
 
@@ -35,15 +33,6 @@ $if[$message[1]!=]
 
 		$endif
 
-	$else
-
-		$title[Hermes | Modules]
-
-		$description[
-		Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
-
-	$endif
 
 $else
 	
@@ -70,20 +59,6 @@ $addField[🎖 $toLocaleUppercase[$getObjectProperty[a5name]]; \`$getObjectPrope
 
 $addField[💰 $toLocaleUppercase[$getObjectProperty[a6name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a6name]\`;yes]
 
-
-$footer[$randomText[Tons of useful commands for server management!;
-Let's get this server active again!;
-Check out these commands!;
-Cool commands to avoid boredom.;
-I hope you're not procrastinating!;
-Stay home, stay safe during the COVID-19 pandemic.;
-Make sure to be respectful and follow the rules.;
-How many times do you open this command?;
-Love y'all for using this bot!;
-Have a great day, whatever you're doing!;
-Have you studied for your assessments yet?;
-Wow, you discovered this messages!;
-Honestly, what can I even say everytime?] ]
  
 
 $argsCheck[<2;Try this: \`.help <module>*\`]
