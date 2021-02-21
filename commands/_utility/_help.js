@@ -1,72 +1,37 @@
 module.exports = {
-  name: "help2",
+  name: "help",
   aliases: ["h", "commands", "command"],
   code: `
 
 $color[$getRoleColor[$highestRole[784688234672160788]]]
 
+$if[$message[1]!=]
 
-$if[$message[1]!=;]
+	$if[$checkContains[$toLowercase[$message[1]];$getObjectProperty[a1name];$getObjectProperty[a2name];$getObjectProperty[a3name];$getObjectProperty[a4name];$getObjectProperty[a5name];$getObjectProperty[a6name]]==true]
 
-	$if[$checkContains[$message[1];$getObjectProperty[1 name];$getObjectProperty[2 name];$getObjectProperty[3 name];$getObjectProperty[4 name];$getObjectProperty[5 name];$getObjectProperty[6 name];]==true]
+		$if[$toLowercase[$message[1]]==$getObjectProperty[a1name]]
 
-		$title[
-		$toLocaleUppercase[$message[1]]
-		]
-
-		$if[$message[1]==$getObjectProperty[1 name]]
-
-			$description[
-				\`\`\`
-				$getObjectProperty[1 commands]
-				\`\`\`
-				Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+			$title[
+			$toLocaleUppercase[$message[1]]
 			]
 
-		$elseIf[$message[1]==$getObjectProperty[2 name]]
-
 			$description[
-				\`\`\`
-				$getObjectProperty[2 commands]
-				\`\`\`
+				\`\`\`$getObjectProperty[a1commands]\`\`\`
 				Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+
 			]
 
-		$elseIf[$message[1]==$getObjectProperty[3 name]]
+			Module 1 ($message[1])
+
+		$else
+
+			$title[Hermes | Modules]
 
 			$description[
-				\`\`\`
-				$getObjectProperty[3 commands]
-				\`\`\`
-				Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
 			]
 
-		$elseIf[$message[1]==$getObjectProperty[4 name]]
-
-			$description[
-				\`\`\`
-				$getObjectProperty[4 commands]
-				\`\`\`
-				Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-			]
-
-		$elseIf[$message[1]==$getObjectProperty[5 name]]
-
-			$description[
-				\`\`\`
-				$getObjectProperty[5 commands]
-				\`\`\`
-				Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-			]
-
-		$elseIf[$message[1]==$getObjectProperty[6 name]]
-
-			$description[
-				\`\`\`
-				$getObjectProperty[6 commands]
-				\`\`\`
-				Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-			]
+			Module not found. ($message[1]!=$getObjectProperty[a1name])
 
 		$endif
 
@@ -80,29 +45,30 @@ $if[$message[1]!=;]
 
 	$endif
 
-
 $else
-
+	
 	$title[Hermes | Modules]
 
 	$description[
-		Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+	Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
 	]
+
+	No arguments provided. $message[1]
 
 $endif
 
 
-$addField[❓ $toLocaleUppercase[$getObjectProperty[1 name]]; \`$getObjectProperty[prefix]help $getObjectProperty[1 name]\`;yes]
+$addField[❓ $toLocaleUppercase[$getObjectProperty[a1name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a1name]\`;yes]
 
-$addField[🛠 $toLocaleUppercase[$getObjectProperty[2 name]]; \`$getObjectProperty[prefix]help $getObjectProperty[2 name]\`;yes]
+$addField[🚨 $toLocaleUppercase[$getObjectProperty[a2name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a2name]\`;yes]
 
-$addField[🎶 $toLocaleUppercase[$getObjectProperty[3 name]]; \`$getObjectProperty[prefix]help $getObjectProperty[3 name]\`;yes]
+$addField[🛠 $toLocaleUppercase[$getObjectProperty[a3name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a3name]\`;yes]
 
-$addField[🏆 $toLocaleUppercase[$getObjectProperty[4 name]]; \`$getObjectProperty[prefix]help $getObjectProperty[4 name]\`;yes]
+$addField[🎶 $toLocaleUppercase[$getObjectProperty[a4name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a4name]\`;yes]
 
-$addField[🎖 $toLocaleUppercase[$getObjectProperty[5 name]]; \`$getObjectProperty[prefix]help $getObjectProperty[5 name]\`;yes]
+$addField[🎖 $toLocaleUppercase[$getObjectProperty[a5name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a5name]\`;yes]
 
-$addField[💰 $toLocaleUppercase[$getObjectProperty[6 name]]; \`$getObjectProperty[prefix]help $getObjectProperty[6 name]\`;yes]
+$addField[💰 $toLocaleUppercase[$getObjectProperty[a6name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a6name]\`;yes]
 
 
 $footer[$randomText[Tons of useful commands for server management!;
@@ -123,31 +89,30 @@ Honestly, what can I even say everytime?] ]
 $argsCheck[<2;Try this: \`.help <module>*\`]
 
 $createObject[{
-	"//1": "You can start changing module and command names here!",
-	"//2": "Enter your values below the labels and replace the blanks.",
 
-	"1 name": \`info\`,
-	"1 commands": \`\`,
+ "a1": "You can start changing module and command names here!",
+ "a2": "Enter your values below the labels and replace the blanks.",
 
-	"2 name": \`moderation\`,
-	"2 commands": \`\`,
+ "a1name": "info",
+ "a1commands": "Nothing here yet!",
 
-	"3 name": \`config\`,
-	"3 commands": \`.setcolour .setcard .setranking\`,
+ "a2name": "moderation",
+ "a2commands": "",
 
-	"4 name": \`music\`,
-	"4 commands": \`.play .skip\`,
+ "a3name": "config",
+ "a3commands": ".setcolour .setcard .setranking",
 
-	"5 name": \`levelling\`,
-	"5 commands": \`.ranks .topranks\`,
+ "a4name": "music",
+ "a4commands": ".play .skip",
 
-	"6 name": \`points\`,
-	"6 commands": \`.credits .topcredits
-.give .dep .with .beg
-.daily .weekly\`,
+ "a5name": "levelling",
+ "a5commands": ".ranks .topranks",
 
-	"prefix": \`.\`,
-	
+ "a6name": "points",
+ "a6commands": ".credits .topcredits .give .dep .with .beg .daily .weekly",
+
+ "prefix": "."
+
 }]
 
 `
