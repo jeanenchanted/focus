@@ -43,8 +43,8 @@ bot.variables({
     "https://www.coolgenerator.com/Data/Textdesign/202011/939574c08043981132a7e9a5771d7aa7.png",
   Card: "1",
   Credits: "0",
-eval: "$onlyIf[$channelID!=743128328705409077;You can't use that command here!\]",
-join: "743128328705409076",
+  eval: "$onlyIf[$channelID!=743128328705409077;You can't use that command here!\]",
+  join: "743128328705409076",
 });
 
 //my commands
