@@ -141,7 +141,7 @@ $createObject[{
  "a5commands": ".ranks .topranks",
 
  "a6name": "points",
- "a6commands": ".credits .topcredits .give\\n.dep .with .beg\\n.daily .weekly",
+ "a6commands": ".credits .topcredits .give\\n.dep .with .beg .daily .weekly",
 
  "prefix": "."
 
