@@ -6,16 +6,81 @@ $color[$getRoleColor[$highestRole[784688234672160788]]]
 
 $if[$message[1]!=]
 
-	$if[$toLowercase[$message[1]]==$getObjectProperty[a1name]]
+	$if[$toLowercase[$message[1]]==info]
 
 		$title[
-		$toLocaleUppercase[$message[1]]
+		$toLocaleUppercase[$getObjectProperty[a1name]] | Commands
 		]
 
 		$description[
 			\`\`\`$getObjectProperty[a1commands]\`\`\`
 			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
 		]
+
+	$elseIf[$toLowercase[$message[1]]==moderation]
+
+		$title[
+		$toLocaleUppercase[$getObjectProperty[a2name]] | Commands
+		]
+
+		$description[
+			\`\`\`$getObjectProperty[a2commands]\`\`\`
+			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+		]
+
+	$endelseIf
+
+	$elseIf[$toLowercase[$message[1]]==config]
+
+		$title[
+		$toLocaleUppercase[$getObjectProperty[a3name]] | Commands
+		]
+
+		$description[
+			\`\`\`$getObjectProperty[a3commands]\`\`\`
+			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+		]
+
+	$endelseIf
+
+	$elseIf[$toLowercase[$message[1]]==music]
+
+		$title[
+		$toLocaleUppercase[$getObjectProperty[a4name]] | Commands
+		]
+
+		$description[
+			\`\`\`$getObjectProperty[a4commands]\`\`\`
+			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+		]
+
+	$endelseIf
+
+	$elseif[$toLowercase[$message[1]]==levelling]
+
+		$title[
+		$toLocaleUppercase[$getObjectProperty[a5name]] | Commands
+		]
+
+		$description[
+			\`\`\`$getObjectProperty[a5commands]\`\`\`
+			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+		]
+
+	$endelseIf
+
+	$elseif[$toLowercase[$message[1]]==points]
+
+		$title[
+		$toLocaleUppercase[$getObjectProperty[a6name]] | Commands
+		]
+
+		$description[
+			\`\`\`$getObjectProperty[a6commands]\`\`\`
+			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+		]
+
+	$endelseIf
 
 	$else
 			
@@ -25,7 +90,7 @@ $if[$message[1]!=]
 		Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
 		]
 
-		Module not found. ($message[1]!=$getObjectProperty[a1name])
+		$footer[Module not found.]
 
 	$endif
 
@@ -36,8 +101,6 @@ $else
 	$description[
 	Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
 	]
-
-	No arguments provided. $message[1]
 
 $endif
 
@@ -78,10 +141,12 @@ $createObject[{
  "a5commands": ".ranks .topranks",
 
  "a6name": "points",
- "a6commands": ".credits .topcredits .give .dep .with .beg .daily .weekly",
+ "a6commands": ".credits .topcredits .give 
+.dep .with .beg 
+.daily .weekly",
 
  "prefix": "."
- 
+
 }]
 `
 };
