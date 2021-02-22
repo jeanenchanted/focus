@@ -1,6 +1,6 @@
 module.exports = {
   name: "help",
-  aliases: ["h", "commands", "command", "info"],
+  aliases: ["h", "commands", "command"],
   code: `
 $color[$getRoleColor[$highestRole[784688234672160788]]]
 
