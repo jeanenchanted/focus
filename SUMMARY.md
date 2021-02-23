@@ -1,7 +1,7 @@
 # Table of contents
 
-* [Changelog](README.md)
-* [Website](https://akisfocus.godaddysites.com/)
+* [focus](README.md)
+* [Website](https://akis.glitch.me/)
 
 ## Points
 
@@ -36,6 +36,4 @@
 * [.setcolour](config/setcolour.md)
 * [.setcard](config/.setcard.md)
 * [.setranking](config/.setranking.md)
-
-## Info
 
