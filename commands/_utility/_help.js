@@ -132,7 +132,7 @@ $createObject[{
  "a2commands": "Nothing here yet",
 
  "a3name": "config",
- "a3commands": ".setcolour .setcard .setranking",
+ "a3commands": ".setcolour .setcard",
 
  "a4name": "music",
  "a4commands": ".play .skip",
