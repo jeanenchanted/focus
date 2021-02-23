@@ -1,31 +1,24 @@
-# focus
-A new way to harness learning.
+---
+description: >-
+  The main bot that manages most of the server, it's made specially for both
+  utility and fun. A multipurpose bot to rule them all. To begin, use `.help`.
+---
 
-A DBD.js Discord Bot made specifically for my Discord Server. It's made to keep me and my friends productive and the server a fun place.
+# Changelog
 
-## About the Bot
+## 1.0.0 - 16-01-2021
 
-What is the purpose of this bot?
+### Added
 
-- get the `focus` server active
-- help people get more `organised`
-- `introduce` new members in the server
-- make the `overall experience` fun
+* Created a docs website to the bot.
 
-## Command List
+### Fixed
 
-You can find a full list of commands either by:
+* Changed the look of some websites.
 
-- typing `.help` to the bot
-- going to `akis.page.link/studycookie`
-- accessing other `README`'s in here
+### Changed
 
-## Table of Contents
+* Made a new website for focus and the bot, including the documentation.
 
-| File			  	 | Purpose																	|
-|	:------------- | ---------------------------------------: |
-| `commands`		 | this folder contains all the commands		|
-| `README.md`		 | a file with information about the bot 		|
-| `.env`			   | where all the bot secrets are						|
-| `server.js`		 | the main file for the bot								|
-| `package.json` | a package containing info about the code |
+
+
