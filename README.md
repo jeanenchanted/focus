@@ -1,9 +1,3 @@
----
-description: >-
-  The main bot that manages most of the server, it's made specially for both
-  utility and fun. A multipurpose bot to rule them all. To begin, use `.help`.
----
-
 # focus
 
 ## About the Bot
@@ -38,4 +32,3 @@ You can find a full list of commands either by:
 #### Changed
 
 * Made a new website for focus and the bot, including the documentation.
-
