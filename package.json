@@ -18,5 +18,11 @@
     "express": "^4.17.1",
     "sqlite3": "^5.0.0",
     "ytdl-core": "^4.1.4"
-  }
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": false
+}
 }
