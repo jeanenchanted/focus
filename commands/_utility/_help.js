@@ -1,7 +1,7 @@
 module.exports = {
-  name: "help",
-  aliases: ["h", "commands", "command"],
-  code: `
+    name: "help",
+    aliases: ["h", "commands", "command"],
+    code: `
 $color[$getRoleColor[$highestRole[784688234672160788]]]
 
 $if[$message[1]!=]
@@ -146,5 +146,5 @@ $createObject[{
  "prefix": "."
 
 }]
-`
-};
+`,
+}
