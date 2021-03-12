@@ -1,4 +1,5 @@
 const dbd = require("dbd.js")
+require("dotenv").config()
 
 const bot = new dbd.Bot({
     token: process.env.TOKEN,

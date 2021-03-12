@@ -4,7 +4,19 @@ I like to format my code properly, thank you very much.
 
 I have a couple of specific ways of editing my code and making it looks pretty and neat. Here are some guidlines to follow when editing code.
 
-⠀
+## **Table of contents**
+
+⠀- [Editing the code](#editing-the-code)
+  - [**Using `Prettier` to format the code**](#using-prettier-to-format-the-code)
+  - [**Codes in strings**](#codes-in-strings)
+  - [**Formatting your `Markdown`**](#formatting-your-markdown)
+    - [**Headers**](#headers)
+    - [**Common formats**](#common-formats)
+    - [**Paragraph separation**](#paragraph-separation)
+  - [**Code snippets and functions**](#code-snippets-and-functions)
+    - [**Strings**](#strings)
+    - [**Functions**](#functions)
+  - [\- written by **@jeanenchanted**](#--written-by-jeanenchanted)
 
 ## **Using `Prettier` to format the code**
 

@@ -2,21 +2,19 @@ module.exports = {
     name: "help",
     aliases: ["h", "commands", "command"],
     code: `
+new one
+${/* set the embed colour to the highest role colour */''}
 $color[$getRoleColor[$highestRole[784688234672160788]]]
 
+${/* if message isn't empty */''}
 $if[$message[1]!=]
 
+    ${/* info module */''}
 	$if[$toLowercase[$message[1]]==info]
 
-		$title[
-		$toLocaleUppercase[$getObjectProperty[a1name]] | Commands
-		]
+		${helpFunc.module(1)}
 
-		$description[
-			\`\`\`$getObjectProperty[a1commands]\`\`\`
-			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
-
+    ${/* moderation module */''}
 	$elseIf[$toLowercase[$message[1]]==moderation]
 
 		$title[
@@ -30,6 +28,7 @@ $if[$message[1]!=]
 
 	$endelseIf
 
+    ${/* config module */''}
 	$elseIf[$toLowercase[$message[1]]==config]
 
 		$title[
@@ -43,6 +42,7 @@ $if[$message[1]!=]
 
 	$endelseIf
 
+    ${/* music module */''}
 	$elseIf[$toLowercase[$message[1]]==music]
 
 		$title[
@@ -56,6 +56,7 @@ $if[$message[1]!=]
 
 	$endelseIf
 
+    ${/* levelling module */''}
 	$elseif[$toLowercase[$message[1]]==levelling]
 
 		$title[
@@ -68,7 +69,8 @@ $if[$message[1]!=]
 		]
 
 	$endelseIf
-
+    
+    ${/* points module */''}
 	$elseif[$toLowercase[$message[1]]==points]
 
 		$title[
@@ -82,6 +84,7 @@ $if[$message[1]!=]
 
 	$endelseIf
 
+    ${/* if module was invalid */''}
 	$else
 			
 		$title[Hermes | Modules]
@@ -94,6 +97,7 @@ $if[$message[1]!=]
 
 	$endif
 
+${/* if no arguments were provided */''}
 $else
 	
 	$title[Hermes | Modules]
@@ -104,6 +108,7 @@ $else
 
 $endif
 
+${/* module list */''}
 $addField[❓ $toLocaleUppercase[$getObjectProperty[a1name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a1name]\`;yes]
 
 $addField[🚨 $toLocaleUppercase[$getObjectProperty[a2name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a2name]\`;yes]
@@ -116,10 +121,10 @@ $addField[🎖 $toLocaleUppercase[$getObjectProperty[a5name]]; \`$getObjectPrope
 
 $addField[💰 $toLocaleUppercase[$getObjectProperty[a6name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a6name]\`;yes]
 
-
+${/* make sure less than 2 arguments are used */''}
 $argsCheck[<2;Try this: \`.help <module>*\`]
 
-
+${/* command settings */''}
 $createObject[{
 
  "a1": "You can start changing module and command names here!",
@@ -147,4 +152,22 @@ $createObject[{
 
 }]
 `,
+}
+
+const helpFunc = {
+    module: (number) => {
+        return `$title[
+            $toLocaleUppercase[$getObjectProperty[a${number}name]] | Commands
+            ]
+    
+            $description[
+                \`\`\`$getObjectProperty[a${number}commands]\`\`\`
+                Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+            ]`
+    },
+    moduleList: (emoji, number) => {
+        return `
+        $addField[${emoji} $toLocaleUppercase[$getObjectProperty[a${number}name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a${number}name]\`;yes]
+        `
+    }
 }
