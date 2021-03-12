@@ -17,70 +17,35 @@ $if[$message[1]!=]
     ${/* moderation module */''}
 	$elseIf[$toLowercase[$message[1]]==moderation]
 
-		$title[
-		$toLocaleUppercase[$getObjectProperty[a2name]] | Commands
-		]
-
-		$description[
-			\`\`\`$getObjectProperty[a2commands]\`\`\`
-			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
+        ${helpFunc.module(2)}
 
 	$endelseIf
 
     ${/* config module */''}
 	$elseIf[$toLowercase[$message[1]]==config]
 
-		$title[
-		$toLocaleUppercase[$getObjectProperty[a3name]] | Commands
-		]
-
-		$description[
-			\`\`\`$getObjectProperty[a3commands]\`\`\`
-			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
+        ${helpFunc.module(3)}
 
 	$endelseIf
 
     ${/* music module */''}
 	$elseIf[$toLowercase[$message[1]]==music]
 
-		$title[
-		$toLocaleUppercase[$getObjectProperty[a4name]] | Commands
-		]
-
-		$description[
-			\`\`\`$getObjectProperty[a4commands]\`\`\`
-			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
+        ${helpFunc.module(4)}
 
 	$endelseIf
 
     ${/* levelling module */''}
 	$elseif[$toLowercase[$message[1]]==levelling]
 
-		$title[
-		$toLocaleUppercase[$getObjectProperty[a5name]] | Commands
-		]
-
-		$description[
-			\`\`\`$getObjectProperty[a5commands]\`\`\`
-			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
+        ${helpFunc.module(5)}
 
 	$endelseIf
     
     ${/* points module */''}
 	$elseif[$toLowercase[$message[1]]==points]
 
-		$title[
-		$toLocaleUppercase[$getObjectProperty[a6name]] | Commands
-		]
-
-		$description[
-			\`\`\`$getObjectProperty[a6commands]\`\`\`
-			Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
-		]
+        ${helpFunc.module(6)}
 
 	$endelseIf
 
