@@ -69,3 +69,16 @@ bot.musicStartCommand({
     $color[$getRoleColor[$highestRole[784688234672160788]]]
 	`,
 })
+
+// autoping your project
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`https://focusbot.jeanenchanted.repl.co`);
+}, 280000);
