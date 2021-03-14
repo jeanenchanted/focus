@@ -117,7 +117,7 @@ $createObject[{
 }]
 
 `,
-    helpFunc: {
+    /* helpFunc: {
         module: (number) => {
             return `$title[
                 $toLocaleUppercase[$getObjectProperty[a${number}name]] | Commands
@@ -133,8 +133,17 @@ $createObject[{
             $addField[${emoji} $toLocaleUppercase[$getObjectProperty[a${number}name]]; \`$getObjectProperty[prefix]help $getObjectProperty[a${number}name]\`;yes]
             `
         }
-    }
+    } */
+    module: function(number) {
+        return `$title[
+            $toLocaleUppercase[$getObjectProperty[a${number}name]] | Commands
+            ]
     
+            $description[
+                \`\`\`$getObjectProperty[a${number}commands]\`\`\`
+                Visit the Study Group [website\\](https://akis.glitch.me) or check out the [docs\\](https://akis.glitch.me/docs.html).
+            ]`
+    },
 }
 
 
